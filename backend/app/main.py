@@ -7,10 +7,15 @@ app = FastAPI(
     version="0.1.0",
 )
 
-# Local frontend development origin. Update this allowlist when deployment URLs are known.
+# Allow the production frontend and local development origins.
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5500", "http://127.0.0.1:5500", "http://localhost:3000"],
+    allow_origins=[
+        "https://finova-ai-sigma.vercel.app",
+        "http://localhost:5500",
+        "http://127.0.0.1:5500",
+        "http://localhost:3000",
+    ],
     allow_credentials=False,
     allow_methods=["GET"],
     allow_headers=["Accept", "Content-Type"],
