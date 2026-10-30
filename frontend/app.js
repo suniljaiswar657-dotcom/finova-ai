@@ -14,16 +14,17 @@ document.querySelectorAll(".nav-item").forEach((item) => {
 });
 
 const connectionLabel = document.getElementById("connection-label");
+const API_BASE_URL = "https://finova-ai-api-shivas-projects-9dc83da6.vercel.app";
 
 async function checkBackend() {
   if (!connectionLabel) return;
   try {
-    const response = await fetch("http://localhost:8000/api/health", {
+    const response = await fetch(`${API_BASE_URL}/api/health`, {
       headers: { Accept: "application/json" }
     });
     if (!response.ok) throw new Error("Backend unavailable");
     const data = await response.json();
-    connectionLabel.textContent = data.status === "ok" ? "Backend reachable" : "Check backend";
+    connectionLabel.textContent = data.status === "ok" ? "Backend connected" : "Check backend";
   } catch {
     connectionLabel.textContent = "Backend not connected";
   }
