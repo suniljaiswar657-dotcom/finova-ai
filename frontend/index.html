@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d18">
+  <meta name="description" content="FINOVA AI — financial intelligence, market research and portfolio insights.">
+  <title>FINOVA AI — Financial Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="FINOVA AI home">
+        <span class="brand-mark">F</span><span>FINOVA<span class="brand-ai"> AI</span></span>
+      </a>
+      <div class="workspace-label">WORKSPACE</div>
+      <nav class="nav-list" aria-label="Main navigation">
+        <a class="nav-item active" href="#overview"><span>◫</span> Overview</a>
+        <a class="nav-item" href="#markets"><span>⌁</span> Markets</a>
+        <a class="nav-item" href="#watchlist"><span>☆</span> Watchlist</a>
+        <a class="nav-item" href="#portfolio"><span>▤</span> Portfolio</a>
+        <a class="nav-item" href="#research"><span>⌕</span> AI Research</a>
+        <a class="nav-item" href="#news"><span>▧</span> Market News</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="connection-card">
+          <span class="status-dot"></span>
+          <div><strong>Data connection</strong><small id="connection-label">Not configured</small></div>
+        </div>
+        <div class="profile"><div class="avatar">F</div><div><strong>FINOVA Workspace</strong><small>Personal dashboard</small></div></div>
+      </div>
+    </aside>
+
+    <main class="main-content" id="overview">
+      <header class="topbar">
+        <button class="menu-button" id="menu-button" aria-label="Toggle navigation">☰</button>
+        <div class="breadcrumb">Workspace <span>/</span> Overview</div>
+        <div class="topbar-right"><span class="market-status"><i></i> Market data not connected</span><button class="icon-button" aria-label="Notifications">♧</button></div>
+      </header>
+
+      <section class="welcome-section">
+        <div><p class="eyebrow">YOUR FINANCIAL COMMAND CENTER</p><h1>Market intelligence,<br><span>with a clearer perspective.</span></h1><p class="subheading">Track markets, research companies and understand your investments from one workspace.</p></div>
+        <div class="date-chip"><span class="pulse"></span> LIVE DATA: PENDING</div>
+      </section>
+
+      <section class="section-block" id="markets">
+        <div class="section-heading"><div><p class="eyebrow">MARKET SNAPSHOT</p><h2>Indian markets</h2></div><span class="muted-label">Waiting for a verified data provider</span></div>
+        <div class="market-grid">
+          <article class="market-card"><div class="card-top"><span class="market-name">NIFTY 50</span><span class="mini-icon">↗</span></div><div class="market-value">— <small>points</small></div><div class="market-change neutral">Live quote unavailable</div><div class="card-foot">NSE · Not connected</div></article>
+          <article class="market-card"><div class="card-top"><span class="market-name">SENSEX</span><span class="mini-icon">⌁</span></div><div class="market-value">— <small>points</small></div><div class="market-change neutral">Live quote unavailable</div><div class="card-foot">BSE · Not connected</div></article>
+          <article class="market-card"><div class="card-top"><span class="market-name">BANK NIFTY</span><span class="mini-icon">▥</span></div><div class="market-value">— <small>points</small></div><div class="market-change neutral">Live quote unavailable</div><div class="card-foot">NSE · Not connected</div></article>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel watchlist-panel" id="watchlist">
+          <div class="panel-heading"><div><p class="eyebrow">YOUR TRACKER</p><h2>Watchlist</h2></div><button class="text-button" id="add-watchlist">＋ Add symbol</button></div>
+          <div class="empty-state"><div class="empty-symbol">☆</div><strong>Your watchlist starts here</strong><p>Add companies and market symbols to follow them in one place.</p></div>
+        </article>
+        <article class="panel ai-panel" id="research">
+          <div class="ai-orb">✳</div><p class="eyebrow">FINOVA INTELLIGENCE</p><h2>Research beyond the numbers.</h2><p>Explore company fundamentals, compare businesses and turn complex market information into clear research.</p><button class="primary-button" id="research-button">AI research · Coming soon <span>↗</span></button>
+          <small class="disclaimer">AI research is not investment advice.</small>
+        </article>
+      </section>
+
+      <section class="content-grid lower-grid">
+        <article class="panel" id="portfolio"><div class="panel-heading"><div><p class="eyebrow">INVESTMENT TRACKER</p><h2>Portfolio overview</h2></div><span class="tag">Setup pending</span></div><div class="empty-inline">Connect a portfolio to see holdings, allocation and performance.</div></article>
+        <article class="panel" id="news"><div class="panel-heading"><div><p class="eyebrow">THE LATEST</p><h2>Market news</h2></div><span class="tag">Feed pending</span></div><div class="empty-inline">Verified financial headlines and AI summaries will appear here after a news source is configured.</div></article>
+      </section>
+
+      <footer class="footer"><span>FINOVA AI</span><span>Independent financial intelligence workspace · For research and education</span></footer>
+    </main>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>
